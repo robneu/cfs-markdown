@@ -2,14 +2,14 @@
 /**
  * CFS Markdown add-on main plugin class.
  *
- * @package     ExamplePlugin
+ * @package     CFSMarkdown
  * @author      Robert Neu
  * @copyright   Copyright (c) 2015, Robert Neu
  * @license     GPL-2.0+
  * @since       0.0.1
  */
 
-// Exit if accessed directly.
+// Prevent direct access.
 defined( 'ABSPATH' ) or exit;
 
 /**

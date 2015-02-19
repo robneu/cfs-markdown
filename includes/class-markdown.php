@@ -2,14 +2,14 @@
 /**
  * CFS Markdown add-on field type class.
  *
- * @package     ExamplePlugin
+ * @package     CFSMarkdown
  * @author      Robert Neu
  * @copyright   Copyright (c) 2015, Robert Neu
  * @license     GPL-2.0+
  * @since       0.0.1
  */
 
-// Exit if accessed directly.
+// Prevent direct access.
 defined( 'ABSPATH' ) or exit;
 
 class CFS_Markdown extends cfs_textarea {

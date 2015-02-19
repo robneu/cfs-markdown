@@ -16,10 +16,10 @@
  * GitHub Branch:     master
  */
 
-// Exit if accessed directly.
+// Prevent direct access.
 defined( 'ABSPATH' ) or exit;
 
-// Define the plugin folder path.
+// Define the plugin directory path.
 if ( ! defined( 'CFSMD_ADDON_DIR' ) ) {
 	define( 'CFSMD_ADDON_DIR', plugin_dir_path( __FILE__ ) );
 }
