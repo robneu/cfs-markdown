@@ -24,6 +24,10 @@ class CFS_Markdown_Addon {
 	 * @return void
 	 */
 	public function run() {
+		// Return early if CFS isn't activated.
+		if ( ! function_exists( 'CFS' ) ) {
+			return;
+		}
 		$this->load_textdomain();
 		$this->includes();
 		add_filter( 'cfs_field_types', array( $this, 'cfs_field_types' ) );
