@@ -1,6 +1,6 @@
 # Custom Field Suite Markdown Add-On
 
-A simple Markdown Add-on for [Custom Field Suite](http://customfieldsuite.com/)
+A simple Markdown add-on for [Custom Field Suite](http://customfieldsuite.com/)
 
 __Contributors:__ [Robert Neu](https://github.com/robneu)  
 __Requires:__ CFS 2.4, WordPress 4.1.1  
@@ -21,9 +21,9 @@ Markdown support is added using the [Parsedown](http://parsedown.org/) class by 
 
 Clone this repository in `/wp-content/plugins/`:
 
-`git clone git@github.com:robneu/genesis-simple-logo.git`
+`git clone https://github.com/robneu/cfs-markdown.git`
 
-Then go to the __Plugins__ screen in your WordPress admin panel and click the __Activate__ link under GistPress.
+Then go to the __Plugins__ screen in your WordPress admin panel and click the __Activate__ link under CFS - Markdown Add-On.
 
 ## Updating ##
 
