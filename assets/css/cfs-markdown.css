@@ -72,7 +72,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .meltdown_wrap .meltdown_editor-wrap .meltdown_editor {
 	display: block;
 	box-shadow: none;
-	border: 1px solid #DEDEDE;
+	border: 1px solid #dedede;
 	margin: 0;
 	min-height: 300px;
 	padding: 10px;
@@ -253,18 +253,6 @@ li.meltdown_controlbutton:focus > span {
 	line-height: 0;
 }
 
-li.meltdown_controlgroup ul {
-	position: absolute;
-	left: 5px;
-	top: 27px;
-	margin: 0px !important;
-	padding: 5px !important;
-	min-width: 100%;
-	background: none repeat scroll 0% 0% #FFF;
-	border: 1px solid rgb(231, 231, 231);
-	list-style: outside none none;
-}
-
 .meltdown_controls li.meltdown_controlgroup-kitchenSink > ul {
 	width: 120px;
 }
@@ -292,14 +280,14 @@ li.meltdown_controlgroup li span {
 }
 
 .meltdown_controls li.meltdown_controlgroup-h > span {
-	width: auto;
+	border: 1px solid #ddd;
 	font-size: 14px;
 	background: #fff;
-	margin: 0 5px;
-	border: 1px solid #ddd;
+	margin: 0 5px 0 0;
 	height: auto;
-	padding: 4px 8px;
+	padding: 5px 10px;
 	font-weight: 400;
+	width: auto;
 }
 
 .meltdown_controls li.meltdown_controlgroup-h > span i.meltdown-icon-caret-down {
@@ -312,7 +300,19 @@ li.meltdown_controlgroup li span {
 li.meltdown_controlgroup-h li span:hover,
 li.meltdown_controlgroup-h li span:focus {
 	border-color: transparent;
-	background: #ECECEC;
+	background: #ececec;
+}
+
+li.meltdown_controlgroup ul {
+	background: #fff;
+	border: 1px solid rgb(231, 231, 231);
+	position: absolute;
+	left: 0;
+	top: 29px;
+	margin: 0px !important;
+	padding: 5px !important;
+	min-width: 100%;
+	list-style: outside none none;
 }
 
 .meltdown_controlbutton.disabled > span,
