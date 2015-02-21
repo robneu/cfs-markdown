@@ -28,11 +28,22 @@ class CFS_Markdown_Addon {
 		if ( ! function_exists( 'CFS' ) ) {
 			return;
 		}
-		$this->load_textdomain();
-		$this->includes();
-		add_filter( 'cfs_field_types', array( $this, 'cfs_field_types' ) );
+		self::load_textdomain();
+		self::includes();
+		self::wp_hooks();
 	}
 
+	/**
+	* Hook into WordPress.
+	*
+	* @since  0.0.1
+	* @access public
+	* @return void
+	*/
+	public function wp_hooks() {
+		add_filter( 'cfs_field_types', array( $this, 'cfs_field_types' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
+	}
 	/**
 	 * Load the plugin language files.
 	 *
@@ -46,6 +57,38 @@ class CFS_Markdown_Addon {
 		$lang_dir = apply_filters( 'cfs_markdown_lang_directory', $lang_dir );
 		// Load the default language files
 		load_plugin_textdomain( 'cfs-markdown', false, $lang_dir );
+	}
+
+	/**
+	 * Register admin scripts styles for Example Plugin.
+	 *
+	 * @since   0.0.1
+	 * @access  public
+	 * @return  void
+	 */
+	function admin_scripts() {
+		$assets_dir = CFSMD_ADDON_URL . 'assets/';
+		$prefix     = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+		wp_register_style(
+			'cfs-markdown',
+			$assets_dir . "css/cfs-markdown{$prefix}.css",
+			array(),
+			CFSMD_ADDON_VERSION
+		);
+		wp_register_script(
+			'meltdown',
+			$assets_dir . "js/vendor/jquery.meltdown{$prefix}.js",
+			array( 'jquery' ),
+			'0.2',
+			true
+		);
+		wp_register_script(
+			'meltdown-init',
+			$assets_dir . "js/meltdown-init{$prefix}.js",
+			array( 'meltdown' ),
+			CFSMD_ADDON_VERSION,
+			true
+		);
 	}
 
 	/**
@@ -71,7 +114,7 @@ class CFS_Markdown_Addon {
 	 * @return array $field_types the modified CFS field types.
 	 */
 	public function cfs_field_types( $field_types ) {
-		$field_types['markdown'] = CFSMD_ADDON_DIR . 'includes/class-markdown.php';
+		$field_types['markdown'] = CFSMD_ADDON_DIR . 'includes/class-cfs-markdown.php';
 		return $field_types;
 	}
 
