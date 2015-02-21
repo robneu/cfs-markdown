@@ -7,7 +7,7 @@ __Requires:__ CFS 2.4, WordPress 4.1.1
 __Tested up to:__ CFS 2.4, WordPress 4.1.1  
 __License:__ [GPL-2.0+](http://www.gnu.org/licenses/gpl-2.0.html)  
 
-This is a small add-on for Custom Field Suite which adds a Markdown field type. The field works similar to the standard textarea input except that it accepts [Markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). In addition to being able to parse and display markdown correctly on the front end, the field also features a WYSIWYG-ish toolbar to make adding Markdown easier and a live Markdown preview window.
+This is a small add-on for Custom Field Suite which adds a Markdown field type. The field works similarly to the standard textarea input except that it accepts [Markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). In addition to being able to parse and display markdown correctly on the front end, the field also features a WYSIWYG-ish toolbar and a live Markdown preview window to make adding Markdown easier.
 
 ![Standard Field](https://cloud.githubusercontent.com/assets/2184093/6314792/1e1ba420-b9b2-11e4-96ab-6142ec38f782.png)
 
