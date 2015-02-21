@@ -17,7 +17,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	- Side by Side
 	- Fullscreen
 	- Element Resize Detection
-	- Meltdown Font Icons
 */
 
 /* Reset
@@ -32,6 +31,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	user-select: none;
 }
 
+.meltdown_wrap,
 .meltdown_wrap * {
 	box-sizing: border-box;
 }
@@ -48,7 +48,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ----------------------------------------------------------------------------- */
 
 .meltdown_wrap {
-	box-sizing: border-box;
 	height: 100% !important;
 	position: relative;
 	width: 100% !important;
@@ -59,6 +58,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .meltdown_topmargin {
 	margin-bottom: 5px;
 }
+
 .meltdown_bottommargin {
 	margin-top: 5px;
 }
@@ -368,7 +368,6 @@ li.meltdown_controlbutton.disabled:focus > span {
 
 .meltdown_preview {
 	border: 1px solid #dedede;
-	box-sizing: border-box;
 	padding: 10px;
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -441,10 +440,8 @@ li.meltdown_controlbutton.disabled:focus > span {
 	width: auto !important;
 	height: auto !important;
 	margin: 0;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
 	border-radius: 0;
-	z-index: 1000;
+	z-index: 9999;
 	resize: none;
 }
 
