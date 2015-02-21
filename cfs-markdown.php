@@ -3,7 +3,7 @@
  * Plugin Name:  CFS - Markdown Add-On
  * Plugin URI:   https://github.com/robneu/cfs-markdown
  * Description:  A markdown textarea field type add-on for Custom Field Suite.
- * Version:      0.0.1
+ * Version:      0.1.0
  * Author:       Robert Neu
  * Author URI:   https://flagshipwp.com
  * License:      GPL-2.0+
@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) or exit;
 
 // Define the plugin version.
 if ( ! defined( 'CFSMD_ADDON_VERSION' ) ) {
-	define( 'CFSMD_ADDON_VERSION', '0.0.1' );
+	define( 'CFSMD_ADDON_VERSION', '0.1.0' );
 }
 // Define the plugin directory URL.
 if ( ! defined( 'CFSMD_ADDON_URL' ) ) {
