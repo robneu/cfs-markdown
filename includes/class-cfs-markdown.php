@@ -12,11 +12,28 @@
 // Prevent direct access.
 defined( 'ABSPATH' ) or exit;
 
-class CFS_Markdown extends cfs_textarea {
+class CFS_Markdown extends cfs_field {
 
 	function __construct() {
 		$this->name  = 'markdown';
 		$this->label = __( 'Markdown', 'cfs-markdown' );
+	}
+
+	/**
+	 * Format the user-generated value for display.
+	 *
+	 * @since  0.0.1
+	 * @access public
+	 * @param  string $value the unformatted value
+	 * @param  string $field the field name to pull from the options database.
+	 * @return string the formatted value which has been parsed for Markdown
+	 */
+	function html( $field ) {
+		wp_enqueue_style( 'cfs-markdown' );
+		wp_enqueue_script( 'meltdown-init' );
+		?>
+		<textarea name="<?php echo $field->input_name; ?>" class="<?php echo $field->input_class; ?>" rows="12"><?php echo $field->value; ?></textarea>
+		<?php
 	}
 
 	/**
@@ -67,6 +84,19 @@ class CFS_Markdown extends cfs_textarea {
 			</td>
 		</tr>
 		<?php
+	}
+
+	/**
+	 * Format the user-generated value for display.
+	 *
+	 * @since  0.0.1
+	 * @access public
+	 * @param  string $value the unformatted value
+	 * @param  string $field the field name to pull from the options database.
+	 * @return string the formatted value which has been parsed for Markdown
+	 */
+	public function format_value_for_input( $value, $field = null ) {
+		return wp_strip_all_tags( $value );
 	}
 
 	/**
