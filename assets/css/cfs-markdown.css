@@ -175,7 +175,8 @@ li.meltdown_controlbutton:focus > span {
 .meltdown_controls li.meltdown_control-codeblock > span:before,
 .meltdown_controls li.meltdown_control-code > span:before,
 .meltdown_controls li.meltdown_control-footnote > span:before,
-.meltdown_controls li.meltdown_controlgroup-kitchenSink > span:before {
+.meltdown_controls li.meltdown_controlgroup-kitchenSink > span:before,
+.meltdown_controls li.meltdown_controlgroup i.meltdown-icon-caret-down:before {
 	position: absolute;
 	left: 4px;
 	top: 4px;
@@ -245,6 +246,13 @@ li.meltdown_controlbutton:focus > span {
 	content: "\f341";
 }
 
+.meltdown_controls li.meltdown_controlgroup i.meltdown-icon-caret-down:before  {
+	content: "\f140";
+	position: relative;
+	height: 10px;
+	line-height: 0;
+}
+
 li.meltdown_controlgroup ul {
 	position: absolute;
 	left: 5px;
@@ -263,10 +271,6 @@ li.meltdown_controlgroup ul {
 
 li.meltdown_controlgroup-open > span {
 	color: #000;
-}
-
-.meltdown_controls li.meltdown_controlgroup i.meltdown-icon-caret-down {
-	content: "\f140";
 }
 
 li.meltdown_controlgroup li {
@@ -299,11 +303,10 @@ li.meltdown_controlgroup li span {
 }
 
 .meltdown_controls li.meltdown_controlgroup-h > span i.meltdown-icon-caret-down {
-	padding-top: 2px;
-	padding-left: 10px;
 	display: block;
 	float: right;
-	margin-bottom: -2px;
+	padding-left: 10px;
+	position: relative;
 }
 
 li.meltdown_controlgroup-h li span:hover,
@@ -332,7 +335,7 @@ li.meltdown_controlbutton.disabled:focus > span {
 }
 
 .meltdown_resizehandle {
-	background: #f5f5f5;
+	background: #fbfbfb;
 	text-align: center;
 	margin: -2px 0 -5px;
 	font-size: 12px;
