@@ -19,11 +19,14 @@
 // Prevent direct access.
 defined( 'ABSPATH' ) or exit;
 
+// Define the plugin version.
+if ( ! defined( 'CFSMD_ADDON_VERSION' ) ) {
+	define( 'CFSMD_ADDON_VERSION', '0.0.1' );
+}
 // Define the plugin directory URL.
 if ( ! defined( 'CFSMD_ADDON_URL' ) ) {
 	define( 'CFSMD_ADDON_URL', plugin_dir_url( __FILE__ ) );
 }
-
 // Define the plugin directory path.
 if ( ! defined( 'CFSMD_ADDON_DIR' ) ) {
 	define( 'CFSMD_ADDON_DIR', plugin_dir_path( __FILE__ ) );
