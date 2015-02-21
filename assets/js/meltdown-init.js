@@ -18,7 +18,14 @@ window.cfsMarkdown = window.cfsMarkdown || {};
 			var meltDown = $('.cfs_markdown .markdown'),
 			options = {
 				controls: $.meltdown.controlsGroup('', '', [
-					'preview',
+					$.meltdown.controlsGroup('h', 'Headers', [
+						'h1',
+						'h2',
+						'h3',
+						'h4',
+						'h5',
+						'h6'
+					]),
 					'bold',
 					'italics',
 					'ul',
@@ -29,14 +36,7 @@ window.cfsMarkdown = window.cfsMarkdown || {};
 					'codeblock',
 					'code',
 					'table',
-					$.meltdown.controlsGroup('h', 'Headers', [
-						'h1',
-						'h2',
-						'h3',
-						'h4',
-						'h5',
-						'h6'
-					])
+					'preview'
 				]),
 				sidebyside: true,
 				previewHeight: 'auto',
