@@ -13,7 +13,7 @@ window.cfsMarkdown = window.cfsMarkdown || {};
 
 	$.extend( cfsMarkdown, {
 
-		// Global scripts init.
+		// Initialize the meltdown script for all markdown fields.
 		globalInit: function() {
 			var meltDown = $('.cfs_markdown .markdown'),
 			options = {
@@ -50,6 +50,7 @@ window.cfsMarkdown = window.cfsMarkdown || {};
 	// Document ready.
 	jQuery(function() {
 		cfsMarkdown.globalInit();
+		// Re-run the script when a new field is added. This is probably inefficient.
 		jQuery(document).on( 'cfs/ready', '.cfs_add_field', function() {
 			cfsMarkdown.globalInit();
 		});
